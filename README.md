@@ -3,7 +3,7 @@ Tested with docker version 24.0.2 and docker compose 2.18.1.
 
 ## Template
 
-Sets up a mysql container and a php-admin container in a new docker network. First time template is run, persistent volumes for both container will be created.  Mysql container mat take a bit longer to become available the first time. This is a very simple template lacking any security or scalability.
+Sets up a mysql container and a php-admin container in a new docker network. First time template is run, persistent volumes for both container will be created.  Mysql container may take a bit longer to become available the first time. __This is a very simple template lacking any security or scalability__.
 
 ## Usage
 
