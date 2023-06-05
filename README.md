@@ -38,6 +38,8 @@ Alternatively, a db client such as Antares may be used:
     
 ## Credits
 
-[Connect to mysql running in docker container from a local machine](https://towardsdatascience.com/connect-to-mysql-running-in-docker-container-from-a-local-machine-6d996c574e55)
+- [Connect to mysql running in docker container from a local machine](https://towardsdatascience.com/connect-to-mysql-running-in-docker-container-from-a-local-machine-6d996c574e55)
+- [How to install docker compose on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04)
+- [Docker compose file reference v3](https://docs.docker.com/compose/compose-file/compose-file-v3/)
 
 
