@@ -15,19 +15,21 @@ Tear down:
 
     docker compose down
     
-Connect to php-admin using a browser:
-
-    http://0.0.0.0:82
+Default user and password:
 
     user: root
     password: 123
+        
+Connect to php-admin using a browser:
+
+    http://0.0.0.0:82
     
 Alternatively, a db client such as Antares may be used:
 
-
+![alt text](https://github.com/javierjsa/mysql-compose/blob/main/antares_login.png?raw=true)
     
  
- Acces mysql container:
+ Access mysql container:
  
     docker exec -ti mysql /bin/bash
     
