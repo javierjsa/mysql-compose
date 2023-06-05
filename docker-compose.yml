@@ -1,0 +1,60 @@
+version: "3.8"
+services:
+  mysql:
+    container_name: mysql
+    image: mysql/mysql-server:latest          
+    pull_policy: if_not_present
+    volumes:
+      - type: volume
+        source: mysql-volume
+        target: /var/lib/mysql
+    ports:
+      - target: 3306
+        published: 3306
+        host_ip: 0.0.0.0
+        protocol: tcp        
+    networks:          
+      mysql-network:
+        aliases:
+          - db          
+        ipv4_address: 172.25.0.2
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_ROOT_HOST: "%"
+
+  php:
+    container_name: php
+    image: phpmyadmin/phpmyadmin
+    pull_policy: if_not_present
+    volumes:
+      - type: volume
+        source: php-volume
+        target: /etc/phpmyadmin/config.user.inc.php
+    ports:
+      - target: 80
+        published: 82
+        host_ip: 0.0.0.0
+        protocol: tcp
+    networks:          
+      mysql-network:         
+        ipv4_address: 172.25.0.3
+    depends_on:
+        mysql:
+          condition: service_started
+volumes:
+  mysql-volume:
+    name: mysql-volume
+    external: False      
+  php-volume:
+    name: php-volume
+    external: False
+networks:
+  mysql-network:        
+    name: mysql-network
+    internal: False
+    external: False
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.25.0.0/24"
+
