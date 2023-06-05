@@ -1,4 +1,4 @@
-Simple docker compose file built as an exercise and also in order to be able to follow 'Complete SQL Mastery' available at codewithmosh.com. 
+Simple docker compose file built as an exercise and also in order to be able to follow [Complete SQL Mastery](https://codewithmosh.com/p/complete-sql-mastery) available at [codewithmosh.com](https://codewithmosh.com). First three hours of the course are available on Youtube as [MySQL Tutorial for Beginners](https://youtu.be/7S_tz1z_5bA).
 Tested with docker version 24.0.2 and docker compose 2.18.1.
 
 ## Template
@@ -27,11 +27,14 @@ Connect to php-admin using a browser:
 Alternatively, a db client such as Antares may be used:
 
 ![Antares connection set up](https://github.com/javierjsa/mysql-compose/blob/main/antares_login.png?raw=true)
-    
- 
+     
  Access mysql container:
  
     docker exec -ti mysql /bin/bash
+    
+ If you ever want to start from scratch, delete mysql volume:
+ 
+    docker volume rm mysql-volume
     
 ## Credits
 
