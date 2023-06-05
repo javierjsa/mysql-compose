@@ -26,10 +26,15 @@ Connect to php-admin using a browser:
     
 Alternatively, a db client such as Antares may be used:
 
-![alt text](https://github.com/javierjsa/mysql-compose/blob/main/antares_login.png?raw=true)
+![Antares connection set up](https://github.com/javierjsa/mysql-compose/blob/main/antares_login.png?raw=true)
     
  
  Access mysql container:
  
     docker exec -ti mysql /bin/bash
     
+## Credits
+
+[Connect to mysql running in docker container from a local machine](https://towardsdatascience.com/connect-to-mysql-running-in-docker-container-from-a-local-machine-6d996c574e55)
+
+
